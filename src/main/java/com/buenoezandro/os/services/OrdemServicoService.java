@@ -12,7 +12,6 @@ import com.buenoezandro.os.domain.enums.Prioridade;
 import com.buenoezandro.os.domain.enums.Status;
 import com.buenoezandro.os.dtos.OrdemServicoDTO;
 import com.buenoezandro.os.repositories.OrdemServicoRepository;
-import com.buenoezandro.os.services.exceptions.IllegalArgumentException;
 import com.buenoezandro.os.services.exceptions.ObjectNotFoundException;
 import com.buenoezandro.os.utils.MensagemUtils;
 
