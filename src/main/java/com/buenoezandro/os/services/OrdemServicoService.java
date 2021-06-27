@@ -67,15 +67,7 @@ public class OrdemServicoService {
 		var cliente = this.clienteService.findById(ordemServicoDTO.getClienteId());
 
 		var atualizaOrdemServico = new OrdemServico();
-		
-		if (ordemServicoDTO.getPrioridade() == null || ordemServicoDTO.getPrioridade().getCod() > 2) {
-			throw new IllegalArgumentException(MensagemUtils.PRIORIDADE_INVALIDA);
-		}
-	
-		if (ordemServicoDTO.getStatus() == null || ordemServicoDTO.getStatus().getCod() > 2) {
-			throw new IllegalArgumentException(MensagemUtils.STATUS_INVALIDO);
-		}
-		
+				
 		if (ordemServicoDTO.getStatus().getCod() == 2) {
 			atualizaOrdemServico.setDataFechamento(LocalDateTime.now());
 		}
