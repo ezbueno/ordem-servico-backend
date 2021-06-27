@@ -50,9 +50,9 @@ public class OrdemServicoService {
 
 		var novaOrdemServico = new OrdemServico();
 		novaOrdemServico.setId(null);
-		novaOrdemServico.setPrioridade(Prioridade.toEnum(ordemServicoDTO.getPrioridade()));
+		novaOrdemServico.setPrioridade(Prioridade.toEnum(ordemServicoDTO.getPrioridade().getCod()));
 		novaOrdemServico.setObservacoes(ordemServicoDTO.getObservacoes());
-		novaOrdemServico.setStatus(Status.toEnum(ordemServicoDTO.getStatus()));
+		novaOrdemServico.setStatus(Status.toEnum(ordemServicoDTO.getStatus().getCod()));
 		novaOrdemServico.setTecnico(tecnico);
 		novaOrdemServico.setCliente(cliente);
 
@@ -68,22 +68,22 @@ public class OrdemServicoService {
 
 		var atualizaOrdemServico = new OrdemServico();
 		
-		if (ordemServicoDTO.getPrioridade() == null || ordemServicoDTO.getPrioridade() > 2) {
+		if (ordemServicoDTO.getPrioridade() == null || ordemServicoDTO.getPrioridade().getCod() > 2) {
 			throw new IllegalArgumentException(MensagemUtils.PRIORIDADE_INVALIDA);
 		}
 	
-		if (ordemServicoDTO.getStatus() == null || ordemServicoDTO.getStatus() > 2) {
+		if (ordemServicoDTO.getStatus() == null || ordemServicoDTO.getStatus().getCod() > 2) {
 			throw new IllegalArgumentException(MensagemUtils.STATUS_INVALIDO);
 		}
 		
-		if (ordemServicoDTO.getStatus() == 2) {
+		if (ordemServicoDTO.getStatus().getCod() == 2) {
 			atualizaOrdemServico.setDataFechamento(LocalDateTime.now());
 		}
 
 		atualizaOrdemServico.setId(ordemServicoDTO.getId());
-		atualizaOrdemServico.setPrioridade(Prioridade.toEnum(ordemServicoDTO.getPrioridade()));
+		atualizaOrdemServico.setPrioridade(Prioridade.toEnum(ordemServicoDTO.getPrioridade().getCod()));
 		atualizaOrdemServico.setObservacoes(ordemServicoDTO.getObservacoes());	
-		atualizaOrdemServico.setStatus(Status.toEnum(ordemServicoDTO.getStatus()));
+		atualizaOrdemServico.setStatus(Status.toEnum(ordemServicoDTO.getStatus().getCod()));
 		atualizaOrdemServico.setTecnico(tecnico);
 		atualizaOrdemServico.setCliente(cliente);
 
