@@ -51,6 +51,11 @@ public class OrdemServicoService {
 		novaOrdemServico.setId(null);
 		novaOrdemServico.setPrioridade(Prioridade.toEnum(ordemServicoDTO.getPrioridade().getCod()));
 		novaOrdemServico.setObservacoes(ordemServicoDTO.getObservacoes());
+
+		if (ordemServicoDTO.getStatus().getCod().equals(2)) {
+			novaOrdemServico.setDataFechamento(LocalDateTime.now());
+		}
+
 		novaOrdemServico.setStatus(Status.toEnum(ordemServicoDTO.getStatus().getCod()));
 		novaOrdemServico.setTecnico(tecnico);
 		novaOrdemServico.setCliente(cliente);
@@ -66,14 +71,14 @@ public class OrdemServicoService {
 		var cliente = this.clienteService.findById(ordemServicoDTO.getClienteId());
 
 		var atualizaOrdemServico = new OrdemServico();
-				
-		if (ordemServicoDTO.getStatus().getCod() == 2) {
+
+		if (ordemServicoDTO.getStatus().getCod().equals(2)) {
 			atualizaOrdemServico.setDataFechamento(LocalDateTime.now());
 		}
 
 		atualizaOrdemServico.setId(ordemServicoDTO.getId());
 		atualizaOrdemServico.setPrioridade(Prioridade.toEnum(ordemServicoDTO.getPrioridade().getCod()));
-		atualizaOrdemServico.setObservacoes(ordemServicoDTO.getObservacoes());	
+		atualizaOrdemServico.setObservacoes(ordemServicoDTO.getObservacoes());
 		atualizaOrdemServico.setStatus(Status.toEnum(ordemServicoDTO.getStatus().getCod()));
 		atualizaOrdemServico.setTecnico(tecnico);
 		atualizaOrdemServico.setCliente(cliente);
