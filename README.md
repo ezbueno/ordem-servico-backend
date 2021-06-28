@@ -26,10 +26,12 @@
 * Tratamento de exceções.
 * Uso adequado do protocolo HTTP no padrão REST, entre outros.
 
-# VISÃO TÉCNICA - FRONT-END: EM DESENVOLVIMENTO
-* Além do back-end, o front-end foi desenvolvido utilizando o Angular 12. 
+# VISÃO TÉCNICA - FRONT-END:
+* Além do back-end, o front-end foi desenvolvido utilizando o Angular 12.
 * Arquitetura MVC do Angular.
 * Componentes visuais do Angular Material.
 * Angular reactive forms.
 * Navegação.
+* Tratamento de exceções.
+* Validação de formulários.
 * Link: https://github.com/ezbueno/ordem-servico-frontend
