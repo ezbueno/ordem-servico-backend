@@ -1,5 +1,7 @@
 <p>
-Construção de uma aplicação web completa, CRUD (CREATE, READ, UPDATE e DELETE) de um sistema  simples de Gerenciamento de Ordens de Serviço.
+* Esse é um sistema que foi desenvolvido usando as tecnologias Spring Boot 2.x para desenvolvimento de uma aplicação web completa, CRUD (CREATE, READ, UPDATE e DELETE) de um sistema  simples de Gerenciamento de Ordens de Serviço, com boas práticas de Engenharia de Software. A hospedagem foi feito na plataforma Heroku. Posteriormente, foi criado a parte do front-end com o framework Angular 12 para consumir esta API. Esta aplicação foi hospedada no GitHub Pages e está disponível no link: https://ezbueno.github.io/
+
+* Obs: Utilizei a conta free do Heroku e após 30 minutos a API entra em modo sleeping. Na próxima requisição, a mesma pode demorar certa de 30 segundos para responder.
 </p>
 
 <p align="center">
@@ -25,8 +27,9 @@ Construção de uma aplicação web completa, CRUD (CREATE, READ, UPDATE e DELET
 * Uso adequado do protocolo HTTP no padrão REST, entre outros.
 
 # VISÃO TÉCNICA - FRONT-END: EM DESENVOLVIMENTO
-* Além do back-end, o front-end foi desenvolvido utilizando o Angular 11. 
+* Além do back-end, o front-end foi desenvolvido utilizando o Angular 12. 
 * Arquitetura MVC do Angular.
-* Componentes visuais do Angular Material
-* Angular reactive forms
-* Navegação. 
+* Componentes visuais do Angular Material.
+* Angular reactive forms.
+* Navegação.
+* Link: https://github.com/ezbueno/ordem-servico-frontend
